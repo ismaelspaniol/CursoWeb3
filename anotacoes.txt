@@ -1,0 +1,24 @@
+##
+    Node
+##
+Cria projeto node
+npm init -y
+
+instala typescript no projeto
+npm i -D typescript
+instala node que compila typescript para tempo de desenvolvimento
+npm i -D ts-node
+
+Cria arquivo de configuracoes de typescript
+npx tsc --init
+
+
+npx tsc na raiz do projeto transpila o ts para js
+
+biblioteca para testes automatizados
+npm i -D jest ts-jest @types/jest
+instalar global para reconhecer comando jest
+npm install -g jest 
+para iniciar biblioteca de testes
+
+jest --init
