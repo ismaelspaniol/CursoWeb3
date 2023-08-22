@@ -14,19 +14,16 @@ export default class Block{
     
     /**
      * Create a new block
-     * @param index The block index in blockchanin
-     
-     * @param previousHash The previous block hash
-     * @param data The block data
+     * @param block The block data
+  
      */
-    constructor(index: number,  previousHash: string, data: string){
+    constructor(block? : Block){
         
-        this.index = index;
-        this.timestamp = Date.now();
-        this.previousHash = previousHash;
-        this.data = data;
-
-        this.hash = this.getHash();
+        this.index = block?.index || 0;
+        this.timestamp = block?.timestamp || Date.now();
+        this.previousHash = block?.previousHash || "";
+        this.data =  block?.data || "";
+        this.hash = block?.hash || this.getHash();
     }
 
     getHash():string{
