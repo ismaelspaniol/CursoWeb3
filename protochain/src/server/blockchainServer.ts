@@ -8,8 +8,10 @@ const PORT: number = 3000;
 
 const app = exppress();
 
-app.use(morgan('tiny'));
-app.use(exppress.json());
+if(process.argv.includes("--run"))
+    app.use(morgan('tiny'));
+
+    app.use(exppress.json());
 
 const blockchain = new Blockchain();
 
@@ -45,6 +47,9 @@ app.post('/blocks', (req, res, next) =>{
     }
 })
 
+if(process.argv.includes("--run"))
 app.listen(PORT, ()=>{
     console.log(`Blockchain server is running at ${PORT}`)
 })
+
+export { app }
