@@ -6,10 +6,12 @@ import Validation from '../validation';
 export default class Block{
     index: number;
     timestamp : number;
+    nonce: number;
+    miner: string;
     hash: string;
     previousHash: string;
     data: string;
-
+    
 
     
     /**
@@ -23,7 +25,10 @@ export default class Block{
         this.timestamp = block?.timestamp || Date.now();
         this.previousHash = block?.previousHash || "";
         this.data =  block?.data || "";
+        this.nonce = block?.nonce || 0;
+        this.miner = block?.miner || "";
         this.hash = block?.hash || this.getHash();
+        
     }
 
     getHash():string{
