@@ -48,8 +48,6 @@ app.post('/blocks', (req, res, next) =>{
 })
 
 if(process.argv.includes("--run"))
-app.listen(PORT, ()=>{
-    console.log(`Blockchain server is running at ${PORT}`)
-})
+    app.listen(PORT, ()=>{ console.log(`Blockchain server is running at ${PORT}`)})
 
 export { app }
