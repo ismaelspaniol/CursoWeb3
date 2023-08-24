@@ -1,5 +1,6 @@
 import Block from "./block";
 import Validation from "../validation";
+import BlockInfo from "../blockInfo";
 
 /**
  * Mocked Blockcian class
@@ -41,5 +42,21 @@ export default class Blockchain {
     isValid(): Validation {
         
         return new Validation;
+    }
+
+    getFeePerTs(): number{
+        return 1;
+    }
+
+    getNextBlock(): BlockInfo{
+                return {
+            data: new Date().toString(),
+            difficulty: 0,
+            previouHash: this.getLastBlock().hash,
+            index: 1,
+            feePerTx: this.getFeePerTs(),
+            maxDifficulty: 62
+        } as BlockInfo;
+
     }
 }
