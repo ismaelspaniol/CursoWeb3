@@ -104,6 +104,7 @@ describe('BlockchainServer Tests', () => {
             txInputs: [new TransactionInput()],
             txOutputs: [new TransactionOutput()],
         } as Transaction);
+        
 
         const response = await request(app)
             .post('/transactions/')

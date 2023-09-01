@@ -12,7 +12,7 @@ import Blockchain from '../lib/blockchain';
 const BLOCKCHAIN_SERVER = process.env.BLOCKCHAIN_SERVER;
 
 const minerWallet = new Wallet(process.env.MINER_WALLET);
-console.log("Logged as " + minerWallet.publicKey + "Server"+process.env.MINER_WALLET);
+console.log("Logged as " + minerWallet.publicKey + "Server" + process.env.MINER_WALLET);
 
 let totalMined = 0;
 
@@ -43,7 +43,7 @@ function getRewardTx(blockInfo: BlockInfo, nextBlock: Block): Transaction | unde
 }
 
 async function mine() {
-    console.log("Getting next block info..."+BLOCKCHAIN_SERVER);
+    console.log("Getting next block info..." + BLOCKCHAIN_SERVER);
     const { data } = await axios.get(`${BLOCKCHAIN_SERVER}blocks/next`);
     console.log('teste');
     console.log(data);
