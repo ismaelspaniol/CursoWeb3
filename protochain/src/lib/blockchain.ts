@@ -15,7 +15,7 @@ export default class Blockchain {
     mempool: Transaction[];
     nextIndex: number = 0;
 
-    static readonly DIFFICULTY_FACTOR = 5;
+    static readonly DIFFICULTY_FACTOR = 1;
     static readonly TX_PER_BLOCK = 2;
     static readonly MAX_DIFFICULTY = 62;
 
