@@ -66,9 +66,7 @@ contract('BookDatabase', function (accounts) {
       assert.fail("The book was removed without permission.");
     }
     catch (err) {
-      assert.include(err.message, "revert", "The error should revert the transaction.");
-
-      //comentando para teste
+      assert.include(err.message, "revert", "The error should revert the transaction.");      
     }
   });
 });
