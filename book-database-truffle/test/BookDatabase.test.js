@@ -67,6 +67,9 @@ contract('BookDatabase', function (accounts) {
     }
     catch (err) {
       assert.include(err.message, "revert", "The error should revert the transaction.");      
+
+
+      //teste stage lazygit
     }
   });
 });
