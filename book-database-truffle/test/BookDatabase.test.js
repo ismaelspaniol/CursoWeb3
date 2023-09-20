@@ -69,8 +69,6 @@ contract('BookDatabase', function (accounts) {
       assert.include(err.message, "revert", "The error should revert the transaction.");
 
       //comentando para teste
-
-      //ola mundo
     }
   });
 });
