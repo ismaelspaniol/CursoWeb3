@@ -22,3 +22,10 @@ npm install -g jest
 para iniciar biblioteca de testes
 
 jest --init
+
+
+
+
+/* Truffle  */
+cria projeto teamplate
+truffle unbox 
